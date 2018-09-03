@@ -301,18 +301,18 @@
 					<artifactId>asciidoctor-maven-plugin</artifactId>
 					<version>1.5.5</version>
 				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-checkstyle-plugin</artifactId>
-					<version>3.0.0</version>
-					<dependencies>
-						<dependency>
-							<groupId>com.puppycrawl.tools</groupId>
-							<artifactId>checkstyle</artifactId>
-							<version>8.5</version>
-						</dependency>
-					</dependencies>
-				</plugin>
+				<!--<plugin>-->
+					<!--<groupId>org.apache.maven.plugins</groupId>-->
+					<!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+					<!--<version>3.0.0</version>-->
+					<!--<dependencies>-->
+						<!--<dependency>-->
+							<!--<groupId>com.puppycrawl.tools</groupId>-->
+							<!--<artifactId>checkstyle</artifactId>-->
+							<!--<version>8.5</version>-->
+						<!--</dependency>-->
+					<!--</dependencies>-->
+				<!--</plugin>-->
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-failsafe-plugin</artifactId>
@@ -455,27 +455,27 @@
 										<ignore />
 									</action>
 								</pluginExecution>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.apache.maven.plugins
-										</groupId>
-										<artifactId>
-											maven-checkstyle-plugin
-										</artifactId>
-										<versionRange>
-											[2.16,)
-										</versionRange>
-										<goals>
-											<goal>
-												check
-											</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore />
-									</action>
-								</pluginExecution>
+								<!--<pluginExecution>-->
+									<!--<pluginExecutionFilter>-->
+										<!--<groupId>-->
+											<!--org.apache.maven.plugins-->
+										<!--</groupId>-->
+										<!--<artifactId>-->
+											<!--maven-checkstyle-plugin-->
+										<!--</artifactId>-->
+										<!--<versionRange>-->
+											<!--[2.16,)-->
+										<!--</versionRange>-->
+										<!--<goals>-->
+											<!--<goal>-->
+												<!--check-->
+											<!--</goal>-->
+										<!--</goals>-->
+									<!--</pluginExecutionFilter>-->
+									<!--<action>-->
+										<!--<ignore />-->
+									<!--</action>-->
+								<!--</pluginExecution>-->
 								<pluginExecution>
 									<pluginExecutionFilter>
 										<groupId>
@@ -566,30 +566,30 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-checkstyle-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>checkstyle-validation</id>
-						<phase>validate</phase>
-						<configuration>
-							<skip>${disable.checks}</skip>
-							<configLocation>src/checkstyle/checkstyle.xml</configLocation>
-							<suppressionsLocation>src/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>
-							<headerLocation>src/checkstyle/checkstyle-header.txt</headerLocation>
-							<propertyExpansion>main.basedir=${main.basedir}</propertyExpansion>
-							<encoding>UTF-8</encoding>
-							<consoleOutput>true</consoleOutput>
-							<failOnViolation>true</failOnViolation>
-							<includeTestSourceDirectory>true</includeTestSourceDirectory>
-						</configuration>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-checkstyle-plugin</artifactId>-->
+				<!--<executions>-->
+					<!--<execution>-->
+						<!--<id>checkstyle-validation</id>-->
+						<!--<phase>validate</phase>-->
+						<!--<configuration>-->
+							<!--<skip>${disable.checks}</skip>-->
+							<!--<configLocation>src/checkstyle/checkstyle.xml</configLocation>-->
+							<!--<suppressionsLocation>src/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>-->
+							<!--<headerLocation>src/checkstyle/checkstyle-header.txt</headerLocation>-->
+							<!--<propertyExpansion>main.basedir=${main.basedir}</propertyExpansion>-->
+							<!--<encoding>UTF-8</encoding>-->
+							<!--<consoleOutput>true</consoleOutput>-->
+							<!--<failOnViolation>true</failOnViolation>-->
+							<!--<includeTestSourceDirectory>true</includeTestSourceDirectory>-->
+						<!--</configuration>-->
+						<!--<goals>-->
+							<!--<goal>check</goal>-->
+						<!--</goals>-->
+					<!--</execution>-->
+				<!--</executions>-->
+			<!--</plugin>-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
